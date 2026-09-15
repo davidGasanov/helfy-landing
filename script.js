@@ -1,3 +1,14 @@
+const stickyCta = document.querySelector(".mobile-cta");
+
+function updateStickyCta() {
+  const show = window.innerWidth < 900 && window.scrollY > 140;
+  stickyCta.classList.toggle("is-visible", show);
+}
+
+window.addEventListener("scroll", updateStickyCta, { passive: true });
+window.addEventListener("resize", updateStickyCta);
+updateStickyCta();
+
 class Carousel {
   constructor(element) {
     this.element = element;
@@ -56,8 +67,12 @@ class Carousel {
     if (this.desktopStatic) this.index = 0;
 
     const gap = Number.parseFloat(getComputedStyle(this.track).columnGap) || 0;
-    const itemWidth = this.items[0].getBoundingClientRect().width;
-    const offset = this.desktopStatic ? 0 : this.index * (itemWidth + gap);
+    let offset = 0;
+    if (!this.desktopStatic) {
+      for (let i = 0; i < this.index; i++) {
+        offset += this.items[i].getBoundingClientRect().width + gap;
+      }
+    }
     this.track.style.transform = `translate3d(${-offset}px, 0, 0)`;
 
     this.dotButtons.forEach((dot, index) => {
