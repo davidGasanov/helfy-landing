@@ -77,3 +77,246 @@
   font-weight: 700;
   font-display: swap;
 }
+
+
+.hero__button {
+  display: none;
+}
+
+.hero__visual {
+  position: relative;
+  grid-area: visual;
+  height: 286px;
+  margin: 20px 20px 0;
+  overflow: hidden;
+  background: var(--green-soft);
+  border-radius: 10px;
+}
+
+.hero__visual img {
+  position: absolute;
+  left: 50%;
+  bottom: -31px;
+  width: 106%;
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+.buyer-rating {
+  display: flex;
+  min-height: 47px;
+  align-items: center;
+  grid-area: rating;
+  padding: 7px 28px 0;
+  font-size: 13px;
+}
+
+.buyer-rating img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.buyer-rating > div {
+  display: flex;
+  flex-direction: column;
+  min-width: max-content;
+  margin-left: 3px;
+}
+
+.buyer-rating strong {
+  font-size: 12px;
+}
+
+.buyer-rating__stars {
+  margin-left: 6px;
+  color: #ffcb22;
+  font-size: 15px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.reviews {
+  padding: 35px 0 26px;
+  overflow: hidden;
+  background: var(--green-wash);
+}
+
+.reviews__inner,
+.how-it-works__inner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reviews h2 {
+  max-width: 330px;
+  margin: 0 auto 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.reviews h2 span,
+.how-it-works h2 span {
+  color: var(--green);
+}
+
+.carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel__track {
+  display: flex;
+  gap: 14px;
+  padding: 0 12px;
+  transition: transform 340ms cubic-bezier(0.22, 0.8, 0.3, 1);
+  will-change: transform;
+}
+
+.review-card {
+  display: flex;
+  width: calc(100vw - 54px);
+  min-width: calc(100vw - 54px);
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 28px 34px 24px;
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.review-card header {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 15px;
+}
+
+.review-card header strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.review-card time {
+  color: #6f7975;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.review-card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.review-card p em {
+  color: var(--green);
+  font-style: inherit;
+}
+
+.review-card footer {
+  margin-top: 16px;
+  color: #89918e;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+}
+
+.review-card footer span {
+  color: var(--green);
+}
+
+.carousel__controls {
+  display: grid;
+  grid-template-columns: 46px 1fr 46px;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 0 14px;
+}
+
+.carousel__arrow {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 0;
+  color: #313a36;
+  background: rgba(255, 255, 255, 0.76);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.carousel__arrow:hover,
+.carousel__arrow:focus-visible {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.carousel__dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.carousel__dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  background: #cfe2cd;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel__dot[aria-current="true"] {
+  background: var(--green);
+}
+
+.how-it-works {
+  position: relative;
+  margin-top: 60px;
+  overflow: hidden;
+  background: var(--green-soft);
+}
+
+.how-it-works__wave {
+  position: absolute;
+  inset: 120px -120px 0;
+  pointer-events: none;
+}
+
+.how-it-works__wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.how-it-works__wave path {
+  fill: none;
+  stroke: #b6dec0;
+  stroke-width: 4;
+}
+
+.how-it-works__inner {
+  position: relative;
+  z-index: 1;
+  padding: 35px 0 26px;
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
