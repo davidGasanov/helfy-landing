@@ -108,10 +108,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.menu-open {
-  overflow: hidden;
-}
-
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -242,62 +238,6 @@ p {
   width: 25px;
   height: 25px;
   color: #09cdaa;
-}
-
-.menu-toggle {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  padding: 10px;
-  place-content: center;
-  gap: 5px;
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
-}
-
-.menu-toggle > span:not(.sr-only) {
-  width: 22px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--ink);
-  transition:
-    transform 180ms ease,
-    opacity 180ms ease;
-}
-
-.menu-toggle[aria-expanded="true"] > span:nth-child(2) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.menu-toggle[aria-expanded="true"] > span:nth-child(3) {
-  opacity: 0;
-}
-
-.menu-toggle[aria-expanded="true"] > span:nth-child(4) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.mobile-menu {
-  position: absolute;
-  inset: 60px 0 auto;
-  display: grid;
-  gap: 4px;
-  padding: 18px 20px 24px;
-  background: #fff;
-  border-top: 1px solid #edf0ed;
-  box-shadow: 0 16px 32px rgba(8, 9, 10, 0.12);
-}
-
-.mobile-menu[hidden] {
-  display: none;
-}
-
-.mobile-menu > a:not(.button) {
-  padding: 12px 4px;
-  font-family: "Poppins", sans-serif;
-  font-size: 16px;
 }
 
 .button {
@@ -451,9 +391,12 @@ p {
 
 .buyer-rating > div {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
   min-width: max-content;
   margin-left: 3px;
+  white-space: nowrap;
 }
 
 .buyer-rating strong {
@@ -461,7 +404,6 @@ p {
 }
 
 .buyer-rating-stars {
-  margin-left: 6px;
   color: #ffcb22;
   font-size: 15px;
   letter-spacing: 1px;
@@ -553,14 +495,19 @@ p {
 }
 
 .review-card footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   margin-top: 16px;
   color: #89918e;
   font-family: "Poppins", sans-serif;
   font-size: 11px;
 }
 
-.review-card footer span {
-  color: var(--green);
+.review-card footer img {
+  width: 12px;
+  height: 12px;
 }
 
 .carousel-controls {
@@ -585,6 +532,11 @@ p {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+}
+
+.carousel-arrow img {
+  width: 9px;
+  height: 16px;
 }
 
 .carousel-arrow:hover,
@@ -782,7 +734,6 @@ p {
 
 .site-footer {
   position: relative;
-  min-height: 675px;
   margin-top: 78px;
   overflow: hidden;
   color: #fff;
@@ -825,7 +776,6 @@ p {
 
 .site-footer-body {
   display: flex;
-  min-height: 485px;
   flex-direction: column;
   padding: 24px 15px 20px;
 }
@@ -853,7 +803,7 @@ p {
 }
 
 .copyright {
-  margin: auto auto 0;
+  margin: 18px auto 0;
   font-size: 10px;
   text-align: center;
 }
@@ -916,8 +866,9 @@ p {
   }
 
   .main-nav {
-    height: 60px;
+    height: 89px;
     justify-content: center;
+    background: #FFF
   }
 
   .brand {
@@ -929,8 +880,6 @@ p {
     height: 31px;
   }
 
-  .menu-toggle,
-  .mobile-menu,
   .mobile-cta {
     display: none !important;
   }
@@ -1018,7 +967,6 @@ p {
   }
 
   .buyer-rating-stars {
-    margin-left: 10px;
     font-size: 22px;
   }
 
@@ -1231,8 +1179,7 @@ p {
   }
 
   .carousel-track,
-  .mobile-cta,
-  .menu-toggle > span:not(.sr-only) {
+  .mobile-cta {
     transition: none;
   }
 }
