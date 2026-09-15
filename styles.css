@@ -80,7 +80,7 @@
 
 :root {
   --ink: #08090a;
-  --green: #079a46;
+  --green: #008935;
   --green-dark: #154b3e;
   --green-soft: #e8f2e5;
   --green-wash: #f5f9f6;
@@ -752,7 +752,7 @@ p {
 }
 
 .step-card-media--phone {
-  width: 130px;
+  width: 71%;
   aspect-ratio: 1.09;
   border-radius: 10px;
 }
@@ -770,9 +770,9 @@ p {
 }
 
 .step-card-media--box {
-  width: 150px;
+  width: 90%;
   aspect-ratio: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   border-radius: 10px;
 }
 
@@ -1145,17 +1145,9 @@ p {
     font-size: clamp(22px, 1.65vw, 32px);
   }
 
-  .step-card-media--phone {
-    width: 190px;
-  }
-
   .step-card-media--doctor {
     aspect-ratio: 1 / 0.58;
     border-radius: 0 0 20px 20px;
-  }
-
-  .step-card-media--box {
-    width: 230px;
   }
 
   .steps-carousel .carousel-controls {
