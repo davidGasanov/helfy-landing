@@ -671,6 +671,7 @@ p {
 .steps-carousel .carousel-track {
   gap: 16px;
   padding-left: 14px;
+  align-items: flex-end;
 }
 
 .step-card {
@@ -684,8 +685,8 @@ p {
   padding: 0 14px;
   background: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.85) 0%,
-    rgba(255, 255, 255, 0) 100%
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.86) 100%
   );
   border: 1.5px solid #fff;
   border-radius: 14px;
@@ -764,11 +765,19 @@ p {
   border-radius: 0 0 12px 12px;
 }
 
+.step-card-media--doctor img {
+  object-position: center top;
+}
+
 .step-card-media--box {
   width: 150px;
-  aspect-ratio: 1.75;
+  aspect-ratio: 1.6;
   margin-bottom: 16px;
   border-radius: 10px;
+}
+
+.step-card-media--box img {
+  object-position: center bottom;
 }
 
 .site-footer {
@@ -1110,15 +1119,16 @@ p {
   }
 
   .step-card {
-    width: 438px;
-    min-width: 438px;
+    flex: 438 1 0px;
+    max-width: 438px;
+    min-width: 0;
     height: 443px;
     border-radius: 22px;
   }
 
   .step-card--lg {
-    width: 499px;
-    min-width: 499px;
+    flex: 499 1 0px;
+    max-width: 499px;
     height: 502px;
   }
 
